@@ -73,6 +73,7 @@ export default function ClientSiteCart() {
 
 
     const handleCheckOut = () => {
+        setLoading(true)
         router.push('/place-order')
     } 
 
