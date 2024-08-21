@@ -23,7 +23,7 @@ export default function MenuMobile({
   setMobileMenu,
   categories,
 }) {
-//   console.log(showCatMenu);
+  console.log(showCatMenu);
 
 
   return (

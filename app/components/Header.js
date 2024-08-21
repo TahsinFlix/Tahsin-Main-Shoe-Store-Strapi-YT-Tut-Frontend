@@ -22,32 +22,32 @@ export default function Header() {
     const [categories, setCategories] = useState([]);
 
     
-    const controlNavbar = () => {
-        const currentScrollY = window.scrollY;
+    // const controlNavbar = () => {
+    //     const currentScrollY = window.scrollY;
 
-        // console.log("Current Scroll Y:", currentScrollY);
-        // console.log("Last Scroll Y:", lastScrollY);
-        // console.log("Nav Show:", navShow);
+    //     // console.log("Current Scroll Y:", currentScrollY);
+    //     // console.log("Last Scroll Y:", lastScrollY);
+    //     // console.log("Nav Show:", navShow);
     
-        if (currentScrollY > 200) {
-            if (currentScrollY > lastScrollY && !mobileMenu) {
-                setNavShow("-translate-y-[80px]");
-            } else {
-                setNavShow("shadow-sm");
-            }
-        } else {
-            setNavShow("translate-y-0");
-        }
-        setLastScrollY(currentScrollY);
-    };
+    //     if (currentScrollY > 200) {
+    //         if (currentScrollY > lastScrollY && !mobileMenu) {
+    //             setNavShow("-translate-y-[80px]");
+    //         } else {
+    //             setNavShow("shadow-sm");
+    //         }
+    //     } else {
+    //         setNavShow("translate-y-0");
+    //     }
+    //     setLastScrollY(currentScrollY);
+    // };
     
 
-    useEffect(() => {
-        window.addEventListener("scroll", controlNavbar);
-        return () => {
-            window.removeEventListener("scroll", controlNavbar);
-        };
-    }, [lastScrollY]);
+    // useEffect(() => {
+    //     window.addEventListener("scroll", controlNavbar);
+    //     return () => {
+    //         window.removeEventListener("scroll", controlNavbar);
+    //     };
+    // }, [lastScrollY]);
 
 
     useEffect(() =>{

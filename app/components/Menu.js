@@ -27,14 +27,15 @@ export default function Menu({ showCatMenu, setShowCatMenu, categories }) {
             
             <li 
             className='cursor-pointer flex items-center gap-2 relative'
-            onMouseEnter={() => setShowCatMenu(true)}
-            onMouseLeave={() => setShowCatMenu(false)}
+            // onMouseEnter={() => setShowCatMenu(true)}
+            // onMouseLeave={() => setShowCatMenu(true)}
+            onClick={(prev) => showCatMenu ? setShowCatMenu(false) : setShowCatMenu(true)}
             >
               {item.name}
               <BsChevronDown size={14} />
 
                 {showCatMenu && (
-                  <ul className='bg-white absolute top-6 left-0 min-w-[250px] px-1 py-1 text-black shadow-lg'>
+                  <ul className='bg-white absolute top-6 left-0 min-w-[250px] px-1 py-1 text-black shadow-lg z-20'>
                     {categories?.map(({ attributes: c, id }) => {
                       return (
                         <Link 
@@ -42,8 +43,8 @@ export default function Menu({ showCatMenu, setShowCatMenu, categories }) {
                         href={`/category/${c.slug}`}
                         onClick={() => setShowCatMenu(false)}
                         >
-                        <li className='h-12 flex justify-between items-center px-3 hover:bg-black/[0.03] rounded-md'>
-                          {c.name}
+                       ` <li className='h-12 flex justify-between items-center px-3 hover:bg-black/[0.03] rounded-md'>
+                          {c.name}`
                           <span className='opacity-50 text-sm'>
                             {`(${c.products.data.length})`}
                           </span>
