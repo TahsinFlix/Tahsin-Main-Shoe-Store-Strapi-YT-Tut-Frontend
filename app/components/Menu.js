@@ -28,7 +28,7 @@ export default function Menu({ showCatMenu, setShowCatMenu, categories }) {
             <li 
             className='cursor-pointer flex items-center gap-2 relative'
             onMouseEnter={() => setShowCatMenu(true)}
-            onMouseLeave={() => setShowCatMenu(true)}
+            onMouseLeave={() => setShowCatMenu(false)}
             >
               {item.name}
               <BsChevronDown size={14} />
@@ -42,8 +42,8 @@ export default function Menu({ showCatMenu, setShowCatMenu, categories }) {
                         href={`/category/${c.slug}`}
                         onClick={() => setShowCatMenu(false)}
                         >
-                       ` <li className='h-12 flex justify-between items-center px-3 hover:bg-black/[0.03] rounded-md'>
-                          {c.name}`
+                        <li className='h-12 flex justify-between items-center px-3 hover:bg-black/[0.03] rounded-md'>
+                          {c.name}
                           <span className='opacity-50 text-sm'>
                             {`(${c.products.data.length})`}
                           </span>
