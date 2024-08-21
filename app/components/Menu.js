@@ -27,9 +27,8 @@ export default function Menu({ showCatMenu, setShowCatMenu, categories }) {
             
             <li 
             className='cursor-pointer flex items-center gap-2 relative'
-            // onMouseEnter={() => setShowCatMenu(true)}
-            // onMouseLeave={() => setShowCatMenu(true)}
-            onClick={(prev) => showCatMenu ? setShowCatMenu(false) : setShowCatMenu(true)}
+            onMouseEnter={() => setShowCatMenu(true)}
+            onMouseLeave={() => setShowCatMenu(true)}
             >
               {item.name}
               <BsChevronDown size={14} />
